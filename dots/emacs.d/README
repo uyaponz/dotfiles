@@ -1,0 +1,32 @@
+簡易Emacs設定ファイル README
+
+1. ファイル構成
+ init.el   : emacsを起動した直後に読み込まれるファイル
+ myfunc.el : 関数定義
+ util/     : Emacs用の便利ツール
+ myconf/   : emacs用の設定ファイル(init.elから呼ばれる)
+ myconf/disp23 : emacs23のGUI設定ファイル
+
+
+2. 主な機能
+ ・行番号表示(Esc+N または Alt+N で表示非表示の切り替え)
+ ・アンドゥだと思って Ctrl+Z を押した時に最小化しない
+ ・背景色・文字色・カーソル色の変更
+ ・タブ幅4、スペースインデントの強制
+ ・マウススクロール量の微調整
+ ・タブ、全角スペースの表示
+ ・スペースしかない行の図示(標準テキスト以外)
+など。
+
+
+3. 対応OS、ディストリとEmacsバージョン
+ ・Ubuntu 10.04 LTS  : Emacs23
+ ・Ubuntu 12.04 LTS  : Emacs23
+ ・Debian 5.1 〜 6.0 : Emacs23
+ ・Vine   5.2 〜 6.0 : Emacs23
+ ・Mac OS X Lion     : Carbon Emacs(emacs22) , Cocoa Emacs(emacs23)
+
+
+4. 設定ファイルの使い方
+ emacsの設定を変えたい場合は、init.elの一番下に設定を書いていく。
+ フォント設定を変えたい場合は、myconf/disp23/ 下をいじる。

@@ -1,0 +1,23 @@
+echo '.bashrc'
+
+case ${OSTYPE} in
+    darwin*)
+        test -f "${HOME}/.bash/bashrc.osx"          && source "${HOME}/.bash/bashrc.osx"
+        test -f "${HOME}/.shcommon/shcommon.osx"    && source "${HOME}/.shcommon/shcommon.osx"
+        test -f "${HOME}/.shcommon/shcommon.common" && source "${HOME}/.shcommon/shcommon.common"
+        ;;
+    linux*)
+        test -f "${HOME}/.bash/bashrc.linux"        && source "${HOME}/.bash/bashrc.linux"
+        test -f "${HOME}/.shcommon/shcommon.linux"  && source "${HOME}/.shcommon/shcommon.linux"
+        test -f "${HOME}/.shcommon/shcommon.common" && source "${HOME}/.shcommon/shcommon.common"
+        ;;
+esac
+
+# --------
+
+### LnF
+
+## History settings
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
+export HISTCONTROL=ignoreboth

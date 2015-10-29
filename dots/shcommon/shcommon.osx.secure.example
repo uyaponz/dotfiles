@@ -1,0 +1,6 @@
+echo '.shcommon/shcommon.osx.secure'
+
+### Application settings
+
+## Homebrew
+export HOMEBREW_GITHUB_API_TOKEN=''

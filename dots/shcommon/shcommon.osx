@@ -1,0 +1,51 @@
+echo '.shcommon/shcommon.osx'
+
+test -f "${HOME}/.shcommon/shcommon.osx.secure" && source "${HOME}/.shcommon/shcommon.osx.secure"
+
+# --------
+
+### Application settings
+
+## Homebrew
+export PATH=/usr/local/bin:${PATH}
+
+## nodebrew
+export PATH=${HOME}/.nodebrew/current/bin:${PATH}
+
+## Octave/Gnuplot
+export GNUTERM=aqua  # x11
+
+## rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+## Java
+# Java version control
+# usage : `chjavaver 1.8`
+function chjavaver() {
+    if [ -z "$1" ]; then
+        echo 'usage : chjavaver 1.8'
+        return
+    fi
+    java_version="$1"
+    if ! [ -z "${JAVA_HOME}" ]; then
+        PATH=$(echo $PATH | sed -e "s|${JAVA_HOME}/bin:||g")
+    fi
+    export JAVA_HOME=$(/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v ${java_version})
+    export PATH=${JAVA_HOME}/bin:${PATH}
+}
+# Set default Java version
+chjavaver '1.8'
+
+# --------
+
+### Aliases
+
+## ls
+alias ls='ls -G'
+
+## Applications
+alias cemacs="open -a ${HOME}/Applications/Emacs.app"
+alias coted="open -a ${HOME}/Applications/CotEditor.app"
+alias st='subl'
+alias mvim="${HOME}/Applications/MacVim.app/Contents/MacOS/Vim -g --remote-tab-silent"

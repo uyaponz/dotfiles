@@ -1,0 +1,13 @@
+echo '.shcommon/shcommon.linux'
+
+### LnF
+
+## For ambiguous-width characters
+export VTE_CJK_WIDTH=1
+
+# --------
+
+### Aliases
+
+## ls
+alias ls='ls --color -G'

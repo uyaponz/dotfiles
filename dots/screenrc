@@ -1,0 +1,25 @@
+escape ^Tt
+
+# Emacs-like key bindings
+bind 0 eval 'remove'
+bind 1 eval 'only'
+bind 2 eval 'split'
+bind 3 eval 'split -v'
+bind o eval 'focus'
+
+# Screen resizing shortcuts
+bind r  eval 'command -c resize'
+bind ^r eval 'command -c resize'
+bind +  eval 'command -c resize'
+bind -  eval 'command -c resize'
+bind -c resize + eval 'resize +1' 'command -c resize'
+bind -c resize - eval 'resize -1' 'command -c resize'
+
+hardstatus alwayslastline "[%Y-%m-%d(%D) %c:%s] %`%-w%{=b bw}%n %t%{-}%+w $STY"
+#termcapinfo xterm* ti@:te@
+scrollback 512
+
+defbce on
+term xterm-256color
+shell $SHELL
+termcapinfo xterm* 'Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm:'

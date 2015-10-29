@@ -1,0 +1,6 @@
+set columns=120
+set lines=48
+
+if has('gui_macvim')
+  set guifont=Ricty-Regular:h12
+endif

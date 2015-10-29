@@ -1,0 +1,25 @@
+set ambiwidth=double
+
+set encoding=utf-8
+set fenc=utf-8
+set ff=unix
+set fileencodings=iso-2022-jp,utf-8,euc-jp,sjis,ucs-2,cp932
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+
+set incsearch
+set ignorecase
+
+syntax on
+set number
+set title
+set ruler
+set nobackup
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+match ZenkakuSpace /　/

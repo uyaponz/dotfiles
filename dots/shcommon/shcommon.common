@@ -1,0 +1,44 @@
+echo '.shcommon/shcommon.common'
+
+### LnF
+
+## ls colors
+export CLICOLOR=1
+export LSCOLORS=gxfxcxdxbxegedabagaced
+
+# --------
+
+### Application settings
+
+## Python
+export PYTHONSTARTUP="${HOME}/.python_startup/autoscript.py"
+
+## Java
+# Set Java encoding
+alias java='java -Dfile.encoding=UTF-8'
+alias javac='javac -J-Dfile.encoding=UTF-8'
+
+# --------
+
+### Environment settings
+
+## Encodings
+export LANG='ja_JP.UTF-8'
+export LC_CTYPE='ja_JP.UTF-8'
+
+# --------
+
+### Aliases
+
+## ls
+alias l='ls'
+alias ll='ls -l'
+alias la='ls -a'
+alias lal='ls -al'
+alias lla='ls -al'
+
+## Encodings
+alias setUTF-8='LANG=ja_JP.UTF-8'
+alias setEUCJP='LANG=ja_JP.eucJP'
+alias setSJIS='LANG=ja_JP.SJIS'
+alias setISO2022JP='LANG=ja_JP'
